@@ -2,7 +2,7 @@
 # Generate Project scoped token from Machine User
 This file helps you to creates machine user and generates project scope token which will be used to call Affinidi API's
 
-**If these steps are already completed and just want to generate new project scope token, then directly jump to [step 4 of section here](#generate-scope-token)**
+**If these steps are already completed and just want to generate new project scope token, then directly jump to [step 4 of section here](#generate-project-scope-token)**
 
 Open the Git bash terminal to this current folder and follow the steps
 
@@ -132,7 +132,7 @@ Sample policy post updating access
 ```
 affinidi iam update-policies -i machineUserId -t machine_user -f policy.json
 ```
-## [Generate Project scope token](#generate-scope-token)
+## Generate Project scope token
 We have created a simple node script which generates project scope token for you.
 1. Open the file `generate-project-scope-token.js` in vs-code 
 2. Set `machineUserId` variable value with the value of "id" from affinidi create token command response in previous step
