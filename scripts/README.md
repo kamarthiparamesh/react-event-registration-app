@@ -132,8 +132,7 @@ Sample policy post updating access
 ```
 affinidi iam update-policies -i machineUserId -t machine_user -f policy.json
 ```
-
-## Generate Project scope token {#generate-scope-token}
+## [Generate Project scope token](#generate-scope-token)
 We have created a simple node script which generates project scope token for you.
 1. Open the file `generate-project-scope-token.js` in vs-code 
 2. Set `machineUserId` variable value with the value of "id" from affinidi create token command response in previous step
