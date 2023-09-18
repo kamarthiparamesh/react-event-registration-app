@@ -7,8 +7,9 @@ const passphrase = 'This is passphrase used for sigining JWT payload'
 const keyid = 'AppVerificationKey' // "AppVerificationKey" given at the time of executing affinidi create token command
 
 const machineUserId = '4b14f758-d725-47bc-865a-6e176581edba' // "id" from affinidi create token command response
+const projectId = "d085c5a5-5765-4d8f-b00e-398f0916a161" //Set project id
+
 const tokenEndpoint = 'https://agitated-khorana-cu0jvycsug.projects.oryapis.com/oauth2/token'
-const projectId = "d085c5a5-5765-4d8f-b00e-398f0916a161"
 
 const issueTimeS = Math.floor(new Date().getTime() / 1000)
 
