@@ -28,7 +28,7 @@ cd react-event-registration-app
 npm install
 ```
 
-5. Install Affinidi AIV Client Extension NPM package
+5. Install Affinidi Client Extension NPM package
 
 ```bash
 npm install @affinidi/client-aiv-extension
