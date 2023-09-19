@@ -90,7 +90,7 @@ const Registration: FC = () => {
       setPassinfo(state => ({
         ...state,
         email: profileData.email,
-        name: `${profileData.givenName} ${profileData.familyName}`.trim(),
+        name: `${profileData.givenName || ''} ${profileData.familyName || ''}`.trim(),
         phoneNumber: profileData.phoneNumber,
         dob: profileData.birthdate,
         gender: profileData.gender,
