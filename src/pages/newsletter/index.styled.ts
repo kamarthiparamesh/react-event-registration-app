@@ -64,3 +64,5 @@ export const SubscribeLink = styled.div`
   color: #10375c;
   cursor: pointer;
 `
+
+export default Button

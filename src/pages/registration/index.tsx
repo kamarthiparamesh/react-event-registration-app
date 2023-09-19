@@ -10,18 +10,18 @@ import {
   Card,
   CardContent,
   Grid,
-  createTheme,
   ThemeProvider,
   Alert,
   ListItem,
   ListItemText,
-  Snackbar
+  Snackbar,
+  createTheme
 } from "@mui/material";
 
 import { useSession } from 'next-auth/react';
 
 //Import custom hooks
-import { useInitiateProfileRequest } from 'src/hooks/useInitiateProfileRequest';
+import { useInitiateProfileRequest } from 'src/hooks/vault/useInitiateProfileRequest';
 
 import LoadingModal from 'src/components/LoadingModal/LoadingModal';
 import ErrorModal from 'src/components/common/ErrorModal/ErrorModal';
@@ -33,21 +33,21 @@ const theme = createTheme({
   },
 });
 
-type RegistrationPassTypeProps = {
-  passtype: string
-  passAmount: string
+type RegistrationProps = {
+  passtype: string;
+  passAmount: string;
   email: string | null | undefined;
   name: string | null | undefined;
-  phoneNumber?: string
-  dob?: string
-  gender?: string
-  address?: string
-  postcode?: string
-  city?: string
-  country?: string
+  phoneNumber?: string;
+  dob?: string;
+  gender?: string;
+  address?: string;
+  postcode?: string;
+  city?: string;
+  country?: string;
 };
 
-const defaults: RegistrationPassTypeProps = {
+const defaults: RegistrationProps = {
   passtype: "",
   passAmount: "",
   email: "",
@@ -59,14 +59,14 @@ const defaults: RegistrationPassTypeProps = {
   postcode: "",
   city: "",
   country: "",
-}
+};
 
 const Registration: FC = () => {
   const { push } = useRouter();
   const [open, setOpen] = useState(false);
 
   //create state with defaults
-  const [passinfo, setPassinfo] = useState<RegistrationPassTypeProps>({ ...defaults, passtype: "Premimum Pass", passAmount: "₹18,999" });
+  const [passinfo, setPassinfo] = useState<RegistrationProps>({ ...defaults, passtype: "Premimum Pass", passAmount: "₹18,999" });
 
   //Prefill available data from session, if user is logged-in
   const { data: session } = useSession()

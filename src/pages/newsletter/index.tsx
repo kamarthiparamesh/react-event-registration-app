@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import ErrorModal from 'src/components/common/ErrorModal/ErrorModal'
 import EmailVcModal from 'src/components/EmailVcModal/EmailVcModal'
 
-import { useVerifyVpMutation } from 'src/hooks/verifier/api'
+import { useVerifyVpMutation } from 'src/hooks/verifier/useVerifyVpMutation'
 
 import * as S from './index.styled'
 

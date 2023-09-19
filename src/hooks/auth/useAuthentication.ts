@@ -1,4 +1,4 @@
-import { useFetchUserInfoQuery } from "./fetchUserInfo";
+import { useFetchUserInfoQuery } from "./useFetchUserInfoQuery";
 
 export function useAuthentication() {
   const { data, status } = useFetchUserInfoQuery();

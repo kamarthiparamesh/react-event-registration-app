@@ -30,3 +30,5 @@ export const Title = styled.div`
     color: #ff5722 
   }
 `;
+
+export default Title

@@ -106,3 +106,4 @@ export const Button = styled.button<{ variant: 'primary' | 'secondary' }>`
       margin-bottom:${pxToRem(52)};
     `}
 `
+export default Button
