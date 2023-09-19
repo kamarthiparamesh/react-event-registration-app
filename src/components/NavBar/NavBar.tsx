@@ -67,7 +67,7 @@ const NavBar: FC = () => {
           direction='row'
         >
           <S.NavTabs onClick={() => window.location.href = '/'}>Home</S.NavTabs>
-          <S.NavTabs onClick={() => window.location.href = '/invitation'}>Invitation</S.NavTabs>
+          <S.NavTabs onClick={() => window.location.href = '/registration'}>Registration</S.NavTabs>
           <S.NavTabs onClick={() => window.location.href = '/newsletter'}>Newsletter</S.NavTabs>
           <S.NavTabs>Contact us</S.NavTabs>
         </S.NavigationContainer>

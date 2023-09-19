@@ -1,5 +1,5 @@
 {
-    "name": "React Event Lab",
+    "name": "React Affinidi Login App",
     "redirectUris": ["http://localhost:3000/api/auth/callback/Affinidi"],
     "presentationDefinition": {
       "id": "vp_combined_email_user_profile_combined",

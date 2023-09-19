@@ -15,6 +15,7 @@ out/
 # production
 build
 *.pem
+scripts/token.txt
 
 # misc
 .DS_Store

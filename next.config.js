@@ -9,8 +9,8 @@ const nextConfig = {
         destination: "/home",
       },
       {
-        source: "/invitation-callback",
-        destination: "/invitation",
+        source: "/registration-callback",
+        destination: "/registration",
       },
     ];
   },

@@ -33,7 +33,7 @@ const theme = createTheme({
   },
 });
 
-type InvitationPassTypeProps = {
+type RegistrationPassTypeProps = {
   passtype: string
   passAmount: string
   email: string | null | undefined;
@@ -47,9 +47,9 @@ type InvitationPassTypeProps = {
   country?: string
 };
 
-const defaults: InvitationPassTypeProps = {
-  passtype: "Premimum Pass",
-  passAmount: "₹18,999",
+const defaults: RegistrationPassTypeProps = {
+  passtype: "",
+  passAmount: "",
   email: "",
   name: "",
   phoneNumber: "",
@@ -61,12 +61,12 @@ const defaults: InvitationPassTypeProps = {
   country: "",
 }
 
-const Invitation: FC = () => {
+const Registration: FC = () => {
   const { push } = useRouter();
   const [open, setOpen] = useState(false);
 
   //create state with defaults
-  const [passinfo, setPassinfo] = useState<InvitationPassTypeProps>(defaults);
+  const [passinfo, setPassinfo] = useState<RegistrationPassTypeProps>({ ...defaults, passtype: "Premimum Pass", passAmount: "₹18,999" });
 
   //Prefill available data from session, if user is logged-in
   const { data: session } = useSession()
@@ -80,7 +80,7 @@ const Invitation: FC = () => {
   //use hooks for Initiating request for User Profile VC
   const { isInitializing, isExtensionInstalled, handleInitiate,
     isLoading, error, errorDescription,
-    profileData } = useInitiateProfileRequest({ callbackUrl: '/invitation-callback', doVerification: true });
+    profileData } = useInitiateProfileRequest({ callbackUrl: '/registration-callback', doVerification: true });
 
 
   useEffect(() => {
@@ -101,7 +101,7 @@ const Invitation: FC = () => {
       }));
       setOpen(true)
 
-      push('/invitation');
+      push('/registration');
 
     }
   }, [profileData]);
@@ -109,19 +109,18 @@ const Invitation: FC = () => {
   return (
     <ThemeProvider theme={theme}>
       {/* //Display Error if any or loading modal popup */}
-      {error && <ErrorModal error={error} errorDescription={errorDescription} closeCallback="/invitation" />}
+      {error && <ErrorModal error={error} errorDescription={errorDescription} closeCallback="/registration" />}
       {isLoading && <LoadingModal title="Verifying" message="Please wait for a few seconds until we process your request." />}
 
       <Snackbar open={open} autoHideDuration={3000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         onClose={() => setOpen(false)}
-        message="Hooray, we have got user profile from your Vault">
-      </Snackbar>
+        message="Hooray, we have got user profile from your Vault" />
 
       <S.Wrapper>
         <Container maxWidth="sm">
           <Box sx={{ mt: 1 }}>
             <Typography variant="h4" align="center">
-              Invitation Pass
+              React Event Registration Form
             </Typography>
           </Box>
 
@@ -196,7 +195,7 @@ const Invitation: FC = () => {
                 />
 
                 <Button variant="contained" color="primary" type="submit" fullWidth sx={{ mt: 2 }}>
-                  Print Pass
+                  Register
                 </Button>
               </Box>
             </CardContent>
@@ -207,4 +206,4 @@ const Invitation: FC = () => {
   )
 }
 
-export default Invitation
+export default Registration
