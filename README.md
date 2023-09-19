@@ -12,10 +12,10 @@ Please go through the below steps to install Affinidi tools
 ## Setup App
 
 Setting up the reference app is easy, just follow these steps:  
-1. Download baseline application code from [linke here](here) and extract the **event-registration-app.zip** file.
+1. Download baseline application code from [link here](here) and extract the **react-event-registration-app.zip** file.
 
 ```bash
-cd event-registration-app
+cd react-event-registration-app
 ```
 
 2. Unzip the downloaded repository and open it in Visual Studio Code or similar IDE.
@@ -109,7 +109,7 @@ affinidi login update-config --id=0143bf454065664893b030289ae17903 --file=./src/
     ```
 
 ## Update .env file with Project Scope Token for VP verification
-1. Follow the steps to generate token from the readme file under `/scripts/README.MD`
+1. Follow the steps to generate token from the [readme file](/scripts/README.MD)
 
 2. Open `.env` file and update the environment variable `PROJECT_SCOPE_TOKEN` with the token generated from previous step
 ```bash
