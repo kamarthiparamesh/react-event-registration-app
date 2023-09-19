@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 
-import DebtIcon from 'src/public/images/debt-icon.svg'
-import FinanceIcon from 'src/public/images/finance-icon.svg'
-import EducationIcon from 'src/public/images/education-icon.svg'
+import DebtIcon from 'public/images/debt-icon.svg'
+import FinanceIcon from 'public/images/finance-icon.svg'
+import EducationIcon from 'public/images/education-icon.svg'
 
 import * as S from './index.styled'
 import { useSession } from 'next-auth/react'

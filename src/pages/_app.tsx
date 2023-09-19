@@ -3,8 +3,8 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { theme } from 'src/utils/theme'
 
-import 'src/public/styles/fonts.css'
-import 'src/public/styles/globals.css'
+import 'public/styles/fonts.css'
+import 'public/styles/globals.css'
 import NavBar from 'src/components/NavBar/NavBar'
 import { SessionProvider } from 'next-auth/react'
 

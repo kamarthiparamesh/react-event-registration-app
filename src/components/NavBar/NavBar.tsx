@@ -3,8 +3,8 @@ import * as S from './NavBar.styled'
 import Box from '../common/Box/Box'
 import Image from 'next/image'
 
-import LogoAffinidi from 'src/public/images/logo-affinidi.svg'
-import LogoReact from 'src/public/images/react.svg'
+import LogoAffinidi from 'public/images/logo-affinidi.svg'
+import LogoReact from 'public/images/react.svg'
 
 import { signOut, useSession } from 'next-auth/react'
 

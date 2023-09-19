@@ -16,7 +16,7 @@ const nextConfig = {
   },
   reactStrictMode: false,
   sassOptions: {
-    includePaths: [path.join(__dirname, "src/public/styles")],
+    includePaths: [path.join(__dirname, "public/styles")],
   },
   compiler: {
     styledComponents: true,

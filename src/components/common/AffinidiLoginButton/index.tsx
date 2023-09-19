@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, MouseEventHandler } from 'react'
 import Image from "next/image";
-import LogoAffinidi from 'src/public/images/logo-affinidi.svg'
+import LogoAffinidi from 'public/images/logo-affinidi.svg'
 import { pxToRem } from 'src/utils';
 import styled from 'styled-components';
 

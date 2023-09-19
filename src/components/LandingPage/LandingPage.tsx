@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
-import logo from 'src/public/images/react-conference.png'
+import logo from 'public/images/react-conference.png'
 import Box from '../common/Box/Box'
 
 import * as S from './LandingPage.styled'

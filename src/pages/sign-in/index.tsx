@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { hostUrl } from 'src/utils/env_public'
 import Input from 'src/components/common/Input/Input'
 
-import signInImage from 'src/public/images/sign-in.png'
+import signInImage from 'public/images/sign-in.png'
 
 import AffinidiLoginButton from 'src/components/common/AffinidiLoginButton'
 import * as S from './index.styled'

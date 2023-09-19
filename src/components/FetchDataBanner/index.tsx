@@ -1,8 +1,8 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
 
-import arrow from 'src/public/images/arrow.png'
-import close from 'src/public/images/close.png'
+import arrow from 'public/images/arrow.png'
+import close from 'public/images/close.png'
 import Box from '../common/Box/Box'
 
 import * as S from './index.styled'
