@@ -1,4 +1,4 @@
-# Event Registration app
+# React Event Registration app
 
 This is a ready-to-use reference app that showcases how to implement password-less login using Affinidi Login and request user profile from Affinidi Vault 
 
