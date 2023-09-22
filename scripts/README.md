@@ -1,13 +1,13 @@
 
-# Generate Project scoped token from Machine User
-This file helps you to creates machine user and generates project scope token which will be used to call Affinidi API's
+# Generate Project Scope token(PST) from Personal Access Token(PAT)
+This file helps you to creates Personal Access Token(machine user) and generates project scope token which will be used to call Affinidi API's
 
 **If these steps are already completed and just want to generate new project scope token, then directly jump to [step 4 of section here](#generate-project-scope-token)**
 
 Open the Git bash terminal to this current folder and follow the steps
 
-## Generate KeyPair
-Generates public and private key pair.
+## Generate RSA KeyPair
+Generates RSA public and private key pair.
 
 Note: Keep your private key file safe and don't share to anyone 
 
@@ -50,11 +50,11 @@ If you want to change the active project, please follow these steps:
 💡 To change the active project run: affinidi project select-project -i <project-id>
 ```
 
-## Create Token (machine user)
-Using affinidi CLI tool we create token(machine user), which stores your public key into Affinidi server which will be used for verifying API requests.
-1. Create token by giving a key name, key id and public key file generated from previous step
+## Create Personal Access Token (PAT)
+Using affinidi CLI tool we create Personal Access Token, which stores your public key into Affinidi server which will be used for verifying API requests.
+1. Create PAT by giving a key name, key id and public key file generated from previous step
 ```
-affinidi token create-token --name="Test Machine User" --key-id="AppVerificationKey" --public-key-file="public-key.pem"
+affinidi token create-token --name="My PAT" --key-id="AppVerificationKey" --public-key-file="public-key.pem"
 ```
 2. Above step creates token and gives you below sample response, keep note of `"id"` which is nothing but `machineUserId`
 ```
@@ -62,7 +62,7 @@ affinidi token create-token --name="Test Machine User" --key-id="AppVerification
   "id": "4b14f758-d725-47bc-865a-6e176581edba",
   "ari": "ari:iam:::machine_user/4b14f758-d725-47bc-865a-6e176581edba",
   "ownerAri": "ari:iam:::user/7ab4d4d5-8139-4e76-9813-3a4fecae9b5f",
-  "name": "Test Machine User",
+  "name": "My PAT",
   "scopes": [
     "openid",
     "offline_access"
@@ -92,9 +92,9 @@ affinidi token create-token --name="Test Machine User" --key-id="AppVerification
 affinidi token list-tokens
 ```
 
-## Create Policy for Machine user to access the Project
-We have created machine user, and there is already default project created. Now we have to provide access permission for machine user to generate project token
-1. Create IAM policy for the machine user, replace `machineUserId` with actual machine user id
+## Create Policy for PAT to access the Project
+We have created PAT, and there is already default project created. Now we have to provide access permission for PAT to generate project token
+1. Create IAM policy for the PAT, replace `machineUserId` with actual machine user id
 ```
 affinidi iam add-principal -i machineUserId -t machine_user
 
@@ -103,7 +103,7 @@ Sample command
 ```
 affinidi iam add-principal -i 4b14f758-d725-47bc-865a-6e176581edba -t machine_user
 ``` 
-2. Get the created policy for the machine user and save to file `policy.json`, replace `machineUserId` with actual machine user id
+2. Get the created policy for the PAT and save to file `policy.json`, replace `machineUserId` with actual machine user id
 ```
 affinidi iam get-policies -i machineUserId > policy.json
 ```
