@@ -65,7 +65,7 @@ Open http://localhost:3000 with your browser to see the application is running f
         "auth": {
             "clientId": "<CLIENT_ID>",
             "clientSecret": "<CLIENT_SECRET>",
-            "issuer": "https://euw1.vpa.auth.affinidi.io",
+            "issuer": "<ISSUER>",
             "tokenEndpointAuthMethod": "client_secret_post"
         },
         "redirectUris": [
@@ -91,21 +91,23 @@ affinidi login update-config --id=LOGIN_CONFIG_ID --file=./src/utils/profile-pex
 ``` 
 Sample Command
 ```
-affinidi login update-config --id=0143bf454065664893b030289ae17903 --file=./src/utils/profile-pex.json
+affinidi login update-config --id=384192b3b3ea3df8cece307fda64cf98 --file=./src/utils/profile-pex.json
 ```
 
 
 ## Update .env file with Login Configuration
-1. Open `.env` file and update the environment variable `PROVIDER_CLIENT_ID` and `PROVIDER_CLIENT_SECRET` with the `CLIENT_ID` and `CLIENT_SECRET` obtained from previous section
+1. Open `.env` file and update the environment variable `PROVIDER_CLIENT_ID` with the `CLIENT_ID`,  `PROVIDER_CLIENT_SECRET` with the `CLIENT_SECRET` and `PROVIDER_ISSUER` with `ISSUER` obtained from previous section
 
     ```bash
     PROVIDER_CLIENT_ID="CLIENT_ID"
     PROVIDER_CLIENT_SECRET="CLIENT_SECRET"
+    PROVIDER_ISSUER="ISSUER"
     ```
     Sample Values
     ```bash
     PROVIDER_CLIENT_ID="8d1d6ac5-dae8-43bd-bd77-1d9fcc73ca6e"
     PROVIDER_CLIENT_SECRET="QKoupDfYr6hDFmpcmsGwiTHmy911"
+    PROVIDER_ISSUER="https://apse1.api.affinidi.io/vpa/v1/login/project/d085c5a5-5765-4d8f-b00e-398f0916a161"
     ```
 
 ## Update .env file with Project Scope Token for VP verification
