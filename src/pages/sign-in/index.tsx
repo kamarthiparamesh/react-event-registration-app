@@ -7,7 +7,7 @@ import Input from 'src/components/common/Input/Input'
 
 import signInImage from 'public/images/sign-in.png'
 
-import AffinidiLoginButton from 'src/components/common/AffinidiLoginButton'
+import { AffinidiLoginButton } from 'affinidi-react-auth'
 import * as S from './index.styled'
 
 const LogIn: FC = () => {
@@ -51,7 +51,9 @@ const LogIn: FC = () => {
                 <S.Line />
               </S.OrContainer>
 
-              <AffinidiLoginButton logInHandler={logIn} />
+              <AffinidiLoginButton logInHandler={logIn}
+                containerStyles={{ padding: 0, paddingTop: '2rem' }}
+                buttonStyles={{ width: "100%", height: 'auto' }} />
 
             </S.ButtonContainer>
 

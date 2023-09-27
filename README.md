@@ -28,18 +28,23 @@ cd react-event-registration-app
 npm install
 ```
 
-5. Install Affinidi Client Extension NPM package
+5. Install Affinidi Client Extension NPM package to interact with Affinidi Vault directly
 
 ```bash
 npm install @affinidi/client-aiv-extension
 ```  
+6. Install affinidi react auth NPM package for adding Affinidi Login button and also easy to direct flow integrate 
 
-6. Create a `.env` file:
+```bash
+npm install affinidi-react-auth
+```  
+
+7. Create a `.env` file:
 ```bash
 cp .env.example .env
 ```
 
-7. Check the Application is running:
+8. Check the Application is running:
 ```bash
 npm run dev
 ```

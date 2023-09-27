@@ -21,11 +21,13 @@ import {
 import { useSession } from 'next-auth/react';
 
 //Import custom hooks
-import { useInitiateProfileRequest } from 'src/hooks/vault/useInitiateProfileRequest';
+import { useInitiateProfileRequest } from 'affinidi-react-auth';
+import { useVerifyVpMutation } from 'src/hooks/verifier/useVerifyVpMutation';
 
 import LoadingModal from 'src/components/LoadingModal/LoadingModal';
 import ErrorModal from 'src/components/common/ErrorModal/ErrorModal';
 import FetchDataBanner from 'src/components/FetchDataBanner';
+import { hostUrl } from 'src/utils/env_public';
 
 const theme = createTheme({
   typography: {
@@ -80,7 +82,7 @@ const Registration: FC = () => {
   //use hooks for Initiating request for User Profile VC
   const { isInitializing, isExtensionInstalled, handleInitiate,
     isLoading, error, errorDescription,
-    profileData } = useInitiateProfileRequest({ callbackUrl: '/registration-callback', doVerification: true });
+    profileData } = useInitiateProfileRequest({ callbackUrl: `${hostUrl}/registration-callback`, doVerification: true, useVerifyVpMutation });
 
 
   useEffect(() => {

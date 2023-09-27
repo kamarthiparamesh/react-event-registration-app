@@ -1,5 +1,5 @@
 {
-    "name": "React Affinidi Login App",
+    "name": "NextJS App",
     "redirectUris": ["http://localhost:3000/api/auth/callback/Affinidi"],
     "presentationDefinition": {
       "id": "vp_combined_email_user_profile_combined",
@@ -175,8 +175,8 @@
       }
     ],
     "clientMetadata": {
-      "name": "Affinidi React Event",
-      "logo": "http://localhost:3000/images/logo-affinidi.svg",
+      "name": "NextJS Reference App",
+      "logo": "http://localhost:3000/images/react.svg",
       "origin": "http://localhost:3000"
     }
   }
